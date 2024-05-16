@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        int[][] num = {{-1,2,9},{0,6,1},{3,5,4}};
+        int[][] num = {{-1,-2,9},{0,6,1},{3,5,4}};
 //        System.out.println(Q1(num));
 //        System.out.println(Q2(num));
 //        System.out.print(Q3(num));
@@ -29,6 +29,8 @@ public class Main {
 //        }else {
 //            System.out.println("some elements repeat");
 //        }
+
+
 
     }
     public static int Q1(int[][] a){
@@ -68,8 +70,8 @@ public class Main {
         for (int i = 0; i < a.length; i++) {
             int min =a[i][0];
             for (int j = 0; j < a[i].length; j++) {
-                if(min >a[i][j]){
-                    min = a[i][j];
+                if(min > a[j][i]){
+                    min = a[j][i];
                 }
             }
             System.out.print(min +" ");
